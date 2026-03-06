@@ -59,9 +59,9 @@ Full CLI/MCP/API duality architecture diagram. Dark background (#0d1117), featur
 
 This repo is the "front door" for the organization. It should reflect the current state of:
 - **[gilgamesh](https://github.com/godsfromthemachine/gilgamesh)** — flagship project, most actively developed
-- **[zeus](https://github.com/godsfromthemachine/zeus)** — stub, Zig build system
-- **[raijin](https://github.com/godsfromthemachine/raijin)** — complete, Rust ONNX inference
-- **[garuda](https://github.com/godsfromthemachine/garuda)** — complete, Zig tree viewer
+- **[zeus](https://github.com/godsfromthemachine/zeus)** — incomplete, Zig build system
+- **[raijin](https://github.com/godsfromthemachine/raijin)** — incomplete, Rust ONNX inference
+- **[garuda](https://github.com/godsfromthemachine/garuda)** — incomplete, Zig tree viewer
 - **[godsfromthemachine.github.io](https://github.com/godsfromthemachine/godsfromthemachine.github.io)** — project website (Hugo)
 - **[whiteboard](https://github.com/godsfromthemachine/whiteboard)** — private planning repo (not linked publicly)
 
