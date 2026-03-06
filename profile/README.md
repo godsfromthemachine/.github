@@ -14,7 +14,7 @@ Every project is designed to run on consumer hardware using small, capable model
 
 | Project | Language | Description |
 |---------|----------|-------------|
-| **[gilgamesh](https://github.com/godsfromthemachine/gilgamesh)** | Go | Local AI coding agent and testing companion. Tool-calling agent with streaming SSE, skills, hooks, and session logging. |
+| **[gilgamesh](https://github.com/godsfromthemachine/gilgamesh)** | Go | TDD-driven local AI coding agent. CLI + MCP + HTTP API interfaces. Tool-calling, streaming SSE, skills, hooks, session logging. |
 | **[zeus](https://github.com/godsfromthemachine/zeus)** | Zig | Zig-as-a-build-system for llama.cpp-powered local GGUF inference. |
 | **[raijin](https://github.com/godsfromthemachine/raijin)** | Rust | Lightning-fast CPU inference via ONNX runtime. |
 | **[garuda](https://github.com/godsfromthemachine/garuda)** | Zig | Directory tree viewer replicating PowerShell's tree command. |
@@ -28,22 +28,31 @@ Every project is designed to run on consumer hardware using small, capable model
 - **CLI + MCP + API**: Every god has CLI, MCP, and HTTP/API interfaces
 - **Mythological**: Projects named after gods and legends — each one a specialized autonomous entity
 
-## Architecture
+## The CLI / MCP / API Duality
+
+Every god exposes the same capabilities through three interfaces — because every MCP tool functions just as well as a CLI command given to an agent via a shell, and just as well as an HTTP endpoint called by another program. We build all three so gods can interface with human users, other agents, external programs, and each other.
 
 ```
-Local AI Model (Qwen 3.5 via llama.cpp)
-         │
-    OpenAI-compatible API
-         │
-    ┌────┴────┐
-    │  Agent  │  ← tool-calling loop with streaming
-    │  Loop   │
-    └────┬────┘
-         │
-    ┌────┴────────────────┐
-    │  Tools / Skills /   │
-    │  Hooks / Context    │
-    └─────────────────────┘
+                    ┌──────────────────────┐
+                    │   Local AI Model     │
+                    │  (Qwen 3.5 / GGUF)  │
+                    └──────────┬───────────┘
+                               │
+                    OpenAI-compatible API
+                               │
+            ┌──────────────────┼──────────────────┐
+            │                  │                  │
+     ┌──────┴──────┐  ┌───────┴───────┐  ┌───────┴───────┐
+     │  CLI REPL   │  │  MCP Server   │  │  HTTP API     │
+     │  (terminal) │  │  (stdio/rpc)  │  │  (REST/SSE)   │
+     └──────┬──────┘  └───────┬───────┘  └───────┬───────┘
+            │                  │                  │
+            └──────────────────┼──────────────────┘
+                               │
+                    ┌──────────┴──────────┐
+                    │  Tools / Skills /   │
+                    │  Hooks / Context    │
+                    └─────────────────────┘
 ```
 
 ## Get involved
