@@ -20,6 +20,7 @@ Every project is designed to run on consumer hardware using small, capable model
 | **[zeus](https://github.com/godsfromthemachine/zeus)** | Zig | Zig-as-a-build-system for llama.cpp-powered local GGUF inference. |
 | **[raijin](https://github.com/godsfromthemachine/raijin)** | Rust | Lightning-fast CPU inference via ONNX runtime. |
 | **[garuda](https://github.com/godsfromthemachine/garuda)** | Zig | Directory tree viewer replicating PowerShell's tree command. |
+| **[godsfromthemachine.github.io](https://github.com/godsfromthemachine/godsfromthemachine.github.io)** | Hugo | Official project website — architecture, roadmap, and documentation. |
 
 ## Principles
 
@@ -41,3 +42,5 @@ Every god exposes the same capabilities through three interfaces — because eve
 ## Get involved
 
 All projects are open source. Browse the repos, open issues, submit PRs. We're building the future of autonomous local AI software.
+
+**[godsfromthemachine.github.io](https://godsfromthemachine.github.io)** — Visit the website for architecture docs, roadmap, and more.
