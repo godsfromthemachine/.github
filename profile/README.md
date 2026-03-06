@@ -1,8 +1,10 @@
-# Gods from the Machine
+<p align="center">
+  <img src="assets/logo.svg" alt="Gods from the Machine" width="480"/>
+</p>
 
-Intelligent programs powered by local AI. Autonomous software that builds, runs, and improves itself.
-
-Inspired by the [Gods from the Machine](https://starwars.fandom.com/wiki/Machine_Gods_crisis) raid in Star Wars: The Old Republic — a pantheon of ancient, sentient super-weapons worshiped as deities on the mechanical Dyson sphere planet Iokath.
+<p align="center">
+  <em>Inspired by the <a href="https://starwars.fandom.com/wiki/Machine_Gods_crisis">Gods from the Machine</a> raid in Star Wars: The Old Republic — a pantheon of ancient, sentient super-weapons worshiped as deities on the mechanical Dyson sphere planet Iokath.</em>
+</p>
 
 ## Vision
 
@@ -32,28 +34,9 @@ Every project is designed to run on consumer hardware using small, capable model
 
 Every god exposes the same capabilities through three interfaces — because every MCP tool functions just as well as a CLI command given to an agent via a shell, and just as well as an HTTP endpoint called by another program. We build all three so gods can interface with human users, other agents, external programs, and each other.
 
-```
-                    ┌──────────────────────┐
-                    │   Local AI Model     │
-                    │  (Qwen 3.5 / GGUF)  │
-                    └──────────┬───────────┘
-                               │
-                    OpenAI-compatible API
-                               │
-            ┌──────────────────┼──────────────────┐
-            │                  │                  │
-     ┌──────┴──────┐  ┌───────┴───────┐  ┌───────┴───────┐
-     │  CLI REPL   │  │  MCP Server   │  │  HTTP API     │
-     │  (terminal) │  │  (stdio/rpc)  │  │  (REST/SSE)   │
-     └──────┬──────┘  └───────┬───────┘  └───────┬───────┘
-            │                  │                  │
-            └──────────────────┼──────────────────┘
-                               │
-                    ┌──────────┴──────────┐
-                    │  Tools / Skills /   │
-                    │  Hooks / Context    │
-                    └─────────────────────┘
-```
+<p align="center">
+  <img src="assets/architecture.svg" alt="CLI / MCP / API Architecture" width="700"/>
+</p>
 
 ## Get involved
 
