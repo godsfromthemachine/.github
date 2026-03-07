@@ -16,7 +16,7 @@ Every project is designed to run on consumer hardware using small, capable model
 
 | Project | Language | Description |
 |---------|----------|-------------|
-| **[gilgamesh](https://github.com/godsfromthemachine/gilgamesh)** | Go | TDD-driven local AI coding agent (v0.5). CLI + MCP + HTTP API. 7 tools, 7 built-in skills, multi-language testing, streaming SSE, hooks, memory persistence, conversation history, custom tools, session logging. Includes Go [benchmark suite](https://github.com/godsfromthemachine/gilgamesh/blob/main/TRIALS.md) for model trialing. |
+| **[gilgamesh](https://github.com/godsfromthemachine/gilgamesh)** | Go | TDD-driven local AI coding agent (v0.6). CLI + MCP + HTTP API. 7 tools, 7 built-in skills, streaming markdown rendering, graceful Ctrl+C, error classification, config validation, env var overrides, memory persistence, conversation history, 243 tests. Includes Go [benchmark suite](https://github.com/godsfromthemachine/gilgamesh/blob/main/TRIALS.md) for model trialing. |
 | **[zeus](https://github.com/godsfromthemachine/zeus)** | Zig | Zig-as-a-build-system for llama.cpp-powered local GGUF inference. *(incomplete)* |
 | **[raijin](https://github.com/godsfromthemachine/raijin)** | Rust | ONNX CPU inference engine. *(incomplete)* |
 | **[garuda](https://github.com/godsfromthemachine/garuda)** | Zig | Directory tree viewer. *(incomplete)* |
