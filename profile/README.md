@@ -39,6 +39,19 @@ Every god exposes the same capabilities through three interfaces — because eve
   <img src="assets/architecture.svg" alt="CLI / MCP / API Architecture" width="700"/>
 </p>
 
+## Research
+
+We run controlled model trials on consumer hardware — no GPU, just CPU inference. Our [benchmark suite](https://github.com/godsfromthemachine/gilgamesh/blob/main/TRIALS.md) tests models across 6 stages from raw inference to full agent edit tasks.
+
+**Key findings:**
+- Qwen3.5 2B Q4_K_M: speed sweet spot (19 tok/s TG on CPU)
+- Qwen3.5 4B Q4_K_M: quality ceiling (2 tool calls vs 9 for same task)
+- 12 threads optimal on 16-core EPYC (16 threads degrades TG by 30%)
+- KV cache q4_0 quantization saves 5-7% RAM with no quality loss
+- Token budget under 1,600 tokens — competitors use 10,000-40,000
+
+See the full [research page](https://godsfromthemachine.github.io/research/) and [trial methodology](https://github.com/godsfromthemachine/gilgamesh/blob/main/docs/TRIAL_METHODOLOGY.md).
+
 ## Get involved
 
 All projects are open source. Browse the repos, open issues, submit PRs. We're building the future of autonomous local AI software.
