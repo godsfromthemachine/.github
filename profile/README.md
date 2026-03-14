@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.svg" alt="Gods from the Machine" width="480"/>
+  <img src="../assets/logo.svg" alt="Gods from the Machine" width="480"/>
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ Every project is designed to run on consumer hardware using small, capable model
 Every god exposes the same capabilities through three interfaces — because every MCP tool functions just as well as a CLI command given to an agent via a shell, and just as well as an HTTP endpoint called by another program. We build all three so gods can interface with human users, other agents, external programs, and each other.
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="CLI / MCP / API Architecture" width="700"/>
+  <img src="../assets/architecture.svg" alt="CLI / MCP / API Architecture" width="700"/>
 </p>
 
 ## Research
